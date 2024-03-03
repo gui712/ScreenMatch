@@ -16,7 +16,7 @@ public class Filme extends Titulo implements Classificavel{
 	@Override
 	public int getClassificacao() {
 		// TODO Auto-generated method stub
-		return 0;
+		return (int)pegaMedia() / 2;
 	}
 	
 }

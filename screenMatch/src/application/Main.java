@@ -1,5 +1,7 @@
 package application;
 import Calculos.CalculadoraDeTempo;
+import Calculos.FiltroDeRecomendacao;
+import Modelos.Episodio;
 import Modelos.Filme;
 import Modelos.Serie;
 
@@ -40,6 +42,18 @@ public class Main {
 	        calculadora.inclui(outroFilme);
 	        calculadora.inclui(lost);
 	        System.out.println(calculadora.getTempoTotal());
+	        
+	        FiltroDeRecomendacao filtro = new FiltroDeRecomendacao();
+	        filtro.filtra(meuFilme);
+	        
+	        Episodio ep = new Episodio();
+	        ep.setNumero(1);
+	        ep.setNome("Revange");
+	        ep.setSerie(lost);
+	        ep.setTotalVisualizacoes(300);
+	        
+	        filtro.filtra(ep);
+	        		
 	
 	}
 
